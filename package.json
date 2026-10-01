@@ -1,0 +1,15 @@
+{
+  "name": "venora-builders",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Venora Builders marketing site — React, Express, and MongoDB.",
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
