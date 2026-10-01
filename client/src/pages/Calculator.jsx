@@ -56,7 +56,7 @@ export default function Calculator() {
       />
       <section className="section">
         <div className="wrap calc-layout">
-          <form className="calc-panel" onSubmit={(event) => event.preventDefault()}>
+          <form className="calc-panel reveal" onSubmit={(event) => event.preventDefault()}>
             <fieldset>
               <legend>Project</legend>
               <div className="choice-row">
@@ -167,7 +167,7 @@ export default function Calculator() {
             </fieldset>
           </form>
 
-          <aside className="estimate">
+          <aside className="estimate reveal">
             <p className="kicker">Indicative range</p>
             <h2>{money(result.low)} – {money(result.high)}</h2>
             <p className="estimate-mid">Mid figure {money(result.total)}</p>

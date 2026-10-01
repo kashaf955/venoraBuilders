@@ -43,7 +43,9 @@ export default function Layout() {
       </a>
       <Navbar />
       <main id="main">
-        <Outlet />
+        <div key={location.pathname} className="page">
+          <Outlet />
+        </div>
       </main>
       <Footer />
       <MobileBar />

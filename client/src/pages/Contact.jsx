@@ -19,13 +19,13 @@ export default function Contact() {
       <section className="section">
         <div className="wrap contact-layout">
           <div className="contact-facts">
-            <article>
+            <article className="reveal">
               <h2>Office</h2>
               <p>{company.legal}</p>
               <p>{company.headquarters}</p>
               <p>Working across {company.regions.join(", ")}.</p>
             </article>
-            <article>
+            <article className="reveal">
               <h2>Phone</h2>
               {company.phones.map((phone) => (
                 <p key={phone}>
@@ -38,7 +38,7 @@ export default function Contact() {
                 </a>
               </p>
             </article>
-            <article>
+            <article className="reveal">
               <h2>Email</h2>
               <p>
                 <a href={`mailto:${company.email}`}>{company.email}</a>
