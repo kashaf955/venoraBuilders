@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero.jsx";
+import SelectedWork from "../components/SelectedWork.jsx";
 import { company, pillars, process, projects, reasons, services, stats, testimonials } from "@shared/content.js";
 
 export default function Home() {
@@ -107,57 +108,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="wrap">
-          <div className="section-head center reveal">
-            <p className="kicker">Portfolio</p>
-            <h2>Selected work</h2>
-          </div>
-          <div className="spec-list">
-            {projects.slice(0, 4).map((project) => (
-              <article key={project.slug} className="spec-card reveal">
-                <img src={project.image} alt="" />
-                <div>
-                  <span className="pill">{project.category}</span>
-                  <h3>{project.title}</h3>
-                  <p>{project.summary}</p>
-                  <ul>
-                    <li>
-                      <b>Location</b>
-                      {project.location}
-                    </li>
-                    <li>
-                      <b>Plot</b>
-                      {project.plot}
-                    </li>
-                    <li>
-                      <b>Scale</b>
-                      {project.area}
-                    </li>
-                    <li>
-                      <b>Status</b>
-                      {project.status}
-                    </li>
-                  </ul>
-                  <div className="spec-actions">
-                    <Link className="text-link" to={`/projects/${project.slug}`}>
-                      View more
-                    </Link>
-                    <Link className="btn" to="/contact">
-                      Get quote
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-          <div className="center-link">
-            <Link className="btn ghost-dark" to="/projects">
-              View all projects
-            </Link>
-          </div>
-        </div>
-      </section>
+      <SelectedWork projects={projects.slice(0, 4)} />
 
       <section className="milestones">
         <div className="wrap">
