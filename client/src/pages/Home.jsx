@@ -197,11 +197,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section method">
         <div className="wrap">
           <div className="section-head center reveal">
             <p className="kicker">Method</p>
             <h2>Eight steps from the site walk to the keys</h2>
+            <p>One sequence on every job, from the first visit to handover.</p>
           </div>
           <ol className="process">
             {process.map((item) => (
@@ -215,17 +216,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section soft">
-        <div className="wrap">
-          <div className="section-head center reveal">
+      <section className="section standards">
+        <div className="wrap standards-layout">
+          <div className="section-head reveal">
             <p className="kicker">Standards</p>
             <h2>Why the cheapest rate is rarely the cheapest house</h2>
+            <p>The difference shows up in the steel, the schedule, and the warranty, not in the brochure.</p>
           </div>
           <div className="reason-grid">
-            {reasons.map((item) => (
+            {reasons.map((item, index) => (
               <article key={item.title} className="reveal">
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
+                <span>0{index + 1}</span>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
               </article>
             ))}
           </div>
