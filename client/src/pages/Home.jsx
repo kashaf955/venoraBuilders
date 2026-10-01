@@ -184,6 +184,7 @@ export default function Home() {
           <div className="section-head center light">
             <p className="kicker">Key milestones</p>
             <h2>A construction company measured by the frame</h2>
+            <p>The numbers we publish, and stand behind on site.</p>
           </div>
           <div className="stat-band">
             {stats.map((item) => (

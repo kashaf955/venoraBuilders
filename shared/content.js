@@ -32,7 +32,7 @@ export const stats = [
   { value: "100,000+", label: "Sq. ft. constructed" },
   { value: "140+", label: "Clients served" },
   { value: "15 yrs", label: "Structural warranty" },
-  { value: "Rs 2,750", label: "Grey structure from / sq. ft." },
+  { value: "Rs 2,750", label: "Grey structure, per sq. ft." },
 ];
 
 export const highlights = [
