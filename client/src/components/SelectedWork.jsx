@@ -8,6 +8,7 @@ export default function SelectedWork({ projects }) {
   const titleRef = useRef(null);
   const barRef = useRef(null);
   const pointer = useRef({ x: 0, y: 0 });
+  const paintRef = useRef(() => {});
   const [reduced, setReduced] = useState(false);
 
   useEffect(() => {
@@ -37,17 +38,16 @@ export default function SelectedWork({ projects }) {
       const scaled = progress * Math.max(count - 1, 1);
       const active = Math.min(count - 1, Math.round(scaled));
 
+      const height = stack.clientHeight;
       cards.forEach((card, index) => {
-        const ahead = Math.max(index - scaled, 0);
-        const passed = Math.min(Math.max(scaled - index, 0), 1);
-        const y = ahead * 82;
-        const scale = 1 - passed * 0.05;
-        card.style.transform = `translate3d(0, ${y}%, 0) scale(${scale})`;
-        card.style.zIndex = String(index + 1);
+        const ahead = index - scaled;
+        const passed = Math.min(Math.max(-ahead, 0), 1);
+        const y = ahead <= 0 ? 0 : Math.min(ahead, 1) * height * 0.84;
+        const scale = 1 - passed * 0.045;
+        const tilt = index === active ? pointer.current.x * -2.2 : 0;
+        card.style.transform = `translate3d(0, ${y}px, 0) scale(${scale}) rotate(${tilt}deg)`;
+        card.style.zIndex = String(10 + index);
       });
-
-      const { x, y } = pointer.current;
-      stack.style.transform = `translate3d(${x * 42}px, ${y * 22}px, 0)`;
 
       if (indexRef.current) indexRef.current.textContent = String(active + 1).padStart(2, "0");
       if (titleRef.current) titleRef.current.textContent = projects[active]?.title ?? "";
@@ -58,6 +58,7 @@ export default function SelectedWork({ projects }) {
     const requestPaint = () => {
       if (!frame) frame = requestAnimationFrame(paint);
     };
+    paintRef.current = requestPaint;
 
     paint();
     window.addEventListener("scroll", requestPaint, { passive: true });
@@ -75,15 +76,12 @@ export default function SelectedWork({ projects }) {
       x: (event.clientX - bounds.left) / bounds.width - 0.5,
       y: (event.clientY - bounds.top) / bounds.height - 0.5,
     };
-    const stack = stackRef.current;
-    if (!stack) return;
-    const { x, y } = pointer.current;
-    stack.style.transform = `translate3d(${x * 42}px, ${y * 22}px, 0)`;
+    paintRef.current();
   };
 
   const onPointerLeave = () => {
     pointer.current = { x: 0, y: 0 };
-    if (stackRef.current) stackRef.current.style.transform = "translate3d(0, 0, 0)";
+    paintRef.current();
   };
 
   if (reduced) {
