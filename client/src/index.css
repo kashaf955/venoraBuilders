@@ -896,6 +896,9 @@ textarea { resize: vertical; }
   .milestones .stat-band { grid-template-columns: 1fr 1fr; }
   .process li::after { display: none; }
   .standards-layout, .standards .section-head { position: static; }
+  .standards-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+  .standards .section-head h2 { font-size: clamp(1.65rem, 6.5vw, 2.2rem); }
+  .standards .reason-grid article > div { min-width: 0; }
   .work-card { grid-template-columns: minmax(180px, 240px) minmax(0, 1fr); }
   .service-row.flip img { order: 0; }
   .project-grid, .project-grid.gallery { grid-template-columns: 1fr 1fr; }
@@ -936,6 +939,12 @@ textarea { resize: vertical; }
   .hero-kicker { letter-spacing: 0.22em; font-size: 0.72rem; }
   .hero-arrow { width: 36px; height: 64px; }
   .section { padding: 3.4rem 0; }
+  .standards {
+    background-position: right -140px bottom -90px;
+    background-size: 260px auto;
+  }
+  .standards .reason-grid article { grid-template-columns: 2.1rem minmax(0, 1fr); gap: 0.7rem; }
+  .standards .reason-grid h3 { font-size: 1.05rem; }
   .form, .pair, .spec-card ul, .project-grid, .project-grid.gallery, .milestones .stat-band { grid-template-columns: 1fr; }
   .footer { padding-bottom: 7rem; }
   .footer-base { flex-direction: column; }
