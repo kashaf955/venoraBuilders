@@ -1,29 +1,36 @@
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero.jsx";
-import { company, highlights, pillars, process, projects, reasons, services, stats, testimonials } from "@shared/content.js";
+import { company, pillars, process, projects, reasons, services, stats, testimonials } from "@shared/content.js";
 
 export default function Home() {
   return (
     <>
       <Hero />
 
-      <section className="section news-section">
+      <section className="section service-ticker" aria-labelledby="home-services">
         <div className="wrap">
           <div className="section-head center reveal">
-            <p className="kicker">Latest</p>
-            <h2>What clients are asking about</h2>
+            <p className="kicker">Our services</p>
+            <h2 id="home-services">From the first drawing to the last coat</h2>
           </div>
-          <div className="news-grid">
-            {highlights.map((item) => (
-              <article key={item.title} className="news-card reveal">
-                <img src={item.image} alt="" />
+        </div>
+        <div className="ticker" aria-label="All services">
+          <div className="ticker-track">
+            {[...services, ...services].map((service, index) => (
+              <Link
+                key={`${service.slug}-${index}`}
+                to={`/services#${service.slug}`}
+                className="ticker-card"
+                aria-hidden={index >= services.length ? true : undefined}
+                tabIndex={index >= services.length ? -1 : undefined}
+              >
+                <img src={service.image} alt="" />
                 <div>
-                  <span className="pill">{item.kicker}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                  <Link to={item.to}>{item.link}</Link>
+                  <span>{service.code}</span>
+                  <h3>{service.title}</h3>
+                  <p>{service.summary}</p>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
@@ -101,33 +108,6 @@ export default function Home() {
       </section>
 
       <section className="section">
-        <div className="wrap">
-          <div className="section-head center reveal">
-            <p className="kicker">Services</p>
-            <h2>From the first drawing to the last coat</h2>
-          </div>
-          <div className="card-grid four">
-            {services.slice(0, 4).map((service) => (
-              <Link key={service.slug} to={`/services#${service.slug}`} className="service-card reveal">
-                <img src={service.image} alt="" />
-                <div>
-                  <span>{service.code}</span>
-                  <h3>{service.title}</h3>
-                  <p>{service.summary}</p>
-                  <strong>Learn more</strong>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div className="center-link">
-            <Link className="btn ghost-dark" to="/services">
-              All services
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section soft">
         <div className="wrap">
           <div className="section-head center reveal">
             <p className="kicker">Portfolio</p>
