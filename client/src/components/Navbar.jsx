@@ -33,13 +33,7 @@ export default function Navbar() {
     <header className={`nav ${solid ? "solid" : ""} ${open ? "open" : ""}`}>
       <div className="nav-inner">
         <Link to="/" className="logo" aria-label="Venora Builders home">
-          <span className="mark" aria-hidden="true">
-            V
-          </span>
-          <span>
-            <strong>Venora</strong>
-            <em>Builders</em>
-          </span>
+          <img src="/logo.png" alt="Venora Builders" width="704" height="200" />
         </Link>
         <div className="nav-end">
           <nav className={open ? "show" : ""}>

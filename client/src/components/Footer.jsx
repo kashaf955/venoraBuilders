@@ -7,11 +7,7 @@ export default function Footer() {
       <div className="footer-grid">
         <div>
           <p className="logo footer-logo">
-            <span className="mark">V</span>
-            <span>
-              <strong>Venora</strong>
-              <em>Builders</em>
-            </span>
+            <img src="/logo.png" alt="Venora Builders" width="704" height="200" loading="lazy" />
           </p>
           <p>
             {company.legal} designs and builds houses, commercial buildings, and turnkey projects from{" "}
