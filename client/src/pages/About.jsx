@@ -8,8 +8,8 @@ export default function About() {
       <PageHero
         kicker="About us"
         title="A construction company measured by the frame, not the brochure."
-        text={`${company.legal} has built from ${company.headquarters} since ${company.founded}. We are an associated company of ${company.associate}.`}
-        image="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=80"
+        text={`${company.legal} has built from ${company.headquarters} since ${company.founded}.`}
+        image="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2000&q=80"
       />
 
       <section className="section">
@@ -19,12 +19,12 @@ export default function About() {
           <p className="lede">
             Venora takes residential and commercial work from consultation through handover. The public record is
             straightforward: more than 100,000 square feet constructed, 140 clients, and grey-structure rates published
-            from Rs 2,750 per square foot.
+            from Rs 2,950 per square foot.
           </p>
           <p>
-            Drawings follow the plot and the authority that governs it — DHA, CDA, LDA, or the local body. Concrete is
-            specified, tested, and covered by a {company.warranty} after handover. Clients in {company.regions.join(", ")}{" "}
-            get a bill of quantities they can read while the site is live.
+            Drawings follow the plot and the authority that governs it — DHA, CDA, RDA, or the local body. Concrete is
+            specified and tested before the next pour. Clients in {company.regions.join(", ")} get a bill of quantities
+            they can read while the site is live.
           </p>
         </div>
         <div className="wrap stat-band">
@@ -51,24 +51,6 @@ export default function About() {
                 <p>{leader.message}</p>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="wrap split associate">
-          <div className="reveal">
-            <p className="kicker">Association</p>
-            <h2>Associated company of {company.associate}.</h2>
-            <p>
-              The association extends Venora’s engineering bench and the scale of residential and commercial work the
-              studio can take on, without changing who is accountable on site.
-            </p>
-          </div>
-          <div className="associate-card reveal">
-            <span>Est. {company.founded}</span>
-            <strong>{company.headquarters}</strong>
-            <p>Residential grey structure, commercial frames, design, interiors, and turnkey handover.</p>
           </div>
         </div>
       </section>

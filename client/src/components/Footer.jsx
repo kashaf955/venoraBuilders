@@ -11,7 +11,7 @@ export default function Footer() {
           </p>
           <p>
             {company.legal} designs and builds houses, commercial buildings, and turnkey projects from{" "}
-            {company.headquarters}. An associated company of {company.associate}.
+            {company.headquarters}.
           </p>
         </div>
         <div>

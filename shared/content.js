@@ -2,18 +2,16 @@ export const company = {
   name: "Venora Builders",
   legal: "Venora Builders (SMC-PVT) Ltd.",
   tagline: "Building Trust. Creating Landmarks.",
-  founded: 2021,
+  founded: 2019,
   headquarters: "Islamabad, Pakistan",
   regions: ["Islamabad", "Rawalpindi", "Lahore"],
   email: "info@venorabuilders.com",
-  phones: ["+92 308 6176888", "+92 335 5591217"],
+  phones: ["+92 308 6176888"],
   whatsapp: "923086176888",
   // Add Facebook, Instagram, LinkedIn, etc. here as { label, url }.
   socials: [{ label: "WhatsApp", url: "https://wa.me/923086176888" }],
   website: "https://venorabuilders.com",
-  greyRateFrom: 2750,
-  warranty: "15-year structural warranty",
-  associate: "MH Associates",
+  greyRateFrom: 2950,
   leaders: [
     {
       name: "Dr. Muhammad Hussain",
@@ -33,14 +31,14 @@ export const company = {
 export const stats = [
   { value: "100,000+", label: "Sq. ft. constructed" },
   { value: "140+", label: "Clients served" },
-  { value: "15 yrs", label: "Structural warranty" },
-  { value: "Rs 2,750", label: "Grey structure, per sq. ft." },
+  { value: "2019", label: "Established" },
+  { value: "Rs 2,950", label: "Grey structure, per sq. ft." },
 ];
 
 export const highlights = [
   {
     kicker: "Residential",
-    title: "Grey structure from Rs 2,750 / sq. ft.",
+    title: "Grey structure from Rs 2,950 / sq. ft.",
     text: "Grade-60 steel, supervised pours, and a rate you can see before the first meeting.",
     to: "/calculator",
     link: "View details",
@@ -48,19 +46,19 @@ export const highlights = [
   },
   {
     kicker: "Partnership",
-    title: "Associated company of MH Associates",
-    text: "A wider engineering bench for larger residential and commercial work.",
+    title: "Established in 2019",
+    text: "Residential and commercial work from Islamabad, with the same supervised team on the pour.",
     to: "/about",
     link: "View details",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    kicker: "Assurance",
-    title: "15-year structural warranty",
-    text: "Cover on the concrete after handover, backed by inspection records.",
+    kicker: "Site",
+    title: "Engineers on the pour",
+    text: "Civil engineers review the concrete on site, and the bill of quantities stays open while the work runs.",
     to: "/contact",
     link: "View details",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 
@@ -90,7 +88,7 @@ export const services = [
       "We take a house from excavated ground to a structure you can finish or occupy. Scope covers layout coordination, concrete frames, brickwork, and site supervision by engineers who stay on the job, not only on the drawing.",
     points: ["Custom villas and family homes", "DHA, Bahria, and city sectors", "Supervised pours and material logs"],
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80",
   },
   {
     slug: "commercial",
@@ -102,14 +100,14 @@ export const services = [
       "Commercial work is judged on time and lettable area. We plan floor plates, vertical circulation, and services so a plaza or office block can open without a second structural campaign.",
     points: ["Plazas and office blocks", "Code and authority compliance", "Schedules tied to handover"],
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1600&q=80",
   },
   {
     slug: "grey-structure",
     code: "03",
     title: "Grey Structure",
     summary:
-      "Foundations, reinforced concrete, brickwork, and slab roofs. Rates starting from Rs 2,750 per sq. ft.",
+      "Foundations, reinforced concrete, brickwork, and slab roofs. Rates starting from Rs 2,950 per sq. ft.",
     detail:
       "The grey structure is the part of the building you cannot cheaply redo. We specify Grade-60 deformed steel, known cement sources, and cylinder testing so the frame matches the drawing.",
     points: ["Published starting rate", "Grade-60 reinforcement", "Foundation to roof slab"],
@@ -126,7 +124,7 @@ export const services = [
       "Turnkey means one party owns the sequence: drawings, permissions, construction, finishes, and the day you receive the keys. The bill of quantities stays visible through the job.",
     points: ["One contract, one schedule", "Approvals liaison", "Finish and handover"],
     image:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1600&q=80",
   },
   {
     slug: "architecture",
@@ -150,7 +148,7 @@ export const services = [
       "Interiors are coordinated with the structure: wet areas, electrical points, and ceiling heights are decided before plaster locks them in. The result is a finished room, not a catalogue pasted onto a shell.",
     points: ["Kitchens and wardrobes", "Lighting plans", "Material boards"],
     image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=1600&q=80",
   },
   {
     slug: "renovation",
@@ -162,7 +160,7 @@ export const services = [
       "Remodeling starts with what the existing structure can carry. We open rooms, replace finishes, and extend only where the frame and the authority allow it.",
     points: ["Facade modernization", "Kitchen and bath rebuilds", "House extensions"],
     image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?auto=format&fit=crop&w=1600&q=80",
   },
   {
     slug: "project-management",
@@ -201,7 +199,7 @@ export const projects = [
     area: "Luxury residence",
     year: "Delivered",
     image:
-      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=80",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1800&q=80",
     summary:
       "A custom villa in DHA Phase 6, built on sandy soil that required deep piles and a reinforced basement raft.",
     story:
@@ -218,7 +216,7 @@ export const projects = [
     area: "Plaza development",
     year: "Delivered",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80",
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1800&q=80",
     summary:
       "A commercial development in Bahria Enclave, engineered for Islamabad’s seismic zone and CDA compliance.",
     story:
@@ -235,7 +233,7 @@ export const projects = [
     area: "Family home",
     year: "Delivered",
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1800&q=80",
     summary:
       "A 1-kanal executive villa delivered on the agreed schedule, with weekly progress shared with the owner.",
     story:
@@ -252,7 +250,7 @@ export const projects = [
     area: "Structural frame",
     year: "Delivered",
     image:
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=80",
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=80",
     summary:
       "Core structural concrete for a retail plaza, run to a published schedule and site safety rules.",
     story:
@@ -269,7 +267,7 @@ export const projects = [
     area: "Interior renovation",
     year: "Delivered",
     image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=80",
+      "https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=1800&q=80",
     summary:
       "An interior remodel of a family villa: glass, stone, and lighting planned with the existing rooms.",
     story:
@@ -283,14 +281,14 @@ export const projects = [
     status: "Ongoing",
     location: "Islamabad, Rawalpindi & Lahore",
     plot: "5 Marla to 1 Kanal+",
-    area: "From Rs 2,750 / sq. ft.",
+    area: "From Rs 2,950 / sq. ft.",
     year: "Active",
     image:
       "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80",
     summary:
       "Ongoing residential grey-structure work: foundations, frames, brickwork, and roof slabs at a published starting rate.",
     story:
-      "This is Venora’s core residential line. Houses are taken through excavation, foundation, reinforced concrete, masonry, and slab, with Grade-60 steel and a starting rate of Rs 2,750 per square foot.",
+      "This is Venora’s core residential line. Houses are taken through excavation, foundation, reinforced concrete, masonry, and slab, with Grade-60 steel and a starting rate of Rs 2,950 per square foot.",
     services: ["Grey structure", "Project management"],
   },
 ];
@@ -298,21 +296,21 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Venora Builders delivered my 1-kanal executive villa on schedule and kept me informed through weekly updates. Their structure standard and concrete testing are what I hired them for.",
-    name: "Brigadier (R) Tariq Mahmood",
+      "Our 10-marla house in DHA was taken to roof slab on the dates we set. We saw the steel and the concrete tests before the next pour.",
+    name: "Usman Khalid",
     meta: "Home owner, DHA Phase 6, Lahore",
   },
   {
     quote:
-      "We commissioned Venora for the structural concrete of our retail plaza in Gulberg Greens. They stayed with the schedule and the safety rules, and the material record was clear.",
-    name: "Mian Nadeem Ahmed",
-    meta: "CEO, Highrise Properties, Islamabad",
+      "The plaza frame in Gulberg Greens stayed on the programme. The quantity record matched the bill, and the site was kept in order.",
+    name: "Sana Iqbal",
+    meta: "Commercial client, Islamabad",
   },
   {
     quote:
-      "The interior redesign of our family lounge added real value to the villa. Glass, marble, and lighting were specified with the architecture, not against it.",
-    name: "Aisha Malik",
-    meta: "Remodeling client, Bahria Town, Islamabad",
+      "The Bahria Town house was opened only where the remodel needed it. The kitchen and baths were rebuilt around the rooms we already use.",
+    name: "Hamza Farooq",
+    meta: "Renovation client, Bahria Town, Islamabad",
   },
 ];
 
@@ -321,10 +319,9 @@ export const process = [
   { step: "02", title: "Site & soil", text: "Walk the plot, check structure feasibility, and note authority rules." },
   { step: "03", title: "Design", text: "Floor plans and elevations you can approve before a rupee of concrete." },
   { step: "04", title: "BOQ", text: "A line-by-line bill of quantities. The calculator on this site is only a first sketch." },
-  { step: "05", title: "Approvals", text: "Drawings submitted to DHA, CDA, LDA, or the relevant authority." },
-  { step: "06", title: "Construction", text: "Excavation, concrete, masonry, and finishes under site supervision." },
-  { step: "07", title: "Inspection", text: "Concrete tests, leakage checks, and a snagging list before handover." },
-  { step: "08", title: "Handover", text: "Clean site, demonstration, warranty papers, and keys." },
+  { step: "05", title: "Approvals", text: "Authority drawings for DHA, CDA, or RDA, filed before excavation starts." },
+  { step: "06", title: "Inspection", text: "Concrete tests, leakage checks, and a snagging list before handover." },
+  { step: "07", title: "Handover", text: "Clean site, a walkthrough of the work, and the keys." },
 ];
 
 export const reasons = [
@@ -333,12 +330,11 @@ export const reasons = [
   { title: "Open pricing", text: "A bill of quantities you can read. Changes are written, not absorbed quietly." },
   { title: "A dated schedule", text: "Milestones are set before work starts and reported while it runs." },
   { title: "Seismic-aware frames", text: "Islamabad and Rawalpindi houses are detailed for lateral load, not copied from a Lahore template." },
-  { title: "A written warranty", text: "Fifteen years on the structural concrete after handover." },
 ];
 
 export const slides = [
   {
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2200&q=80",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=2200&q=80",
     kicker: "DHA Phase 6, Lahore",
     title: "The Obsidian House",
     text: "A custom villa on deep piles, finished as a luxury residence.",
@@ -346,15 +342,15 @@ export const slides = [
     secondary: { label: "Inquire now", to: "/contact" },
   },
   {
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2200&q=80",
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2200&q=80",
     kicker: "Residential grey structure",
-    title: "From Rs 2,750 / sq. ft.",
+    title: "From Rs 2,950 / sq. ft.",
     text: "Foundations, reinforced concrete, and roof slabs with Grade-60 steel.",
     primary: { label: "Calculate cost", to: "/calculator" },
     secondary: { label: "Grey structure", to: "/services#grey-structure" },
   },
   {
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=80",
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2200&q=80",
     kicker: "Bahria Enclave, Islamabad",
     title: "Akbar Vista",
     text: "A commercial frame detailed for Islamabad’s seismic zone.",
@@ -362,10 +358,10 @@ export const slides = [
     secondary: { label: "Get a quote", to: "/contact" },
   },
   {
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2200&q=80",
+    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=2200&q=80",
     kicker: "Design to handover",
     title: "Turnkey Homes",
-    text: "Drawings, approvals, structure, finishes, and a 15-year warranty.",
+    text: "Drawings, approvals, structure, and finishes under one team.",
     primary: { label: "Our services", to: "/services" },
     secondary: { label: "Book a consultation", to: "/contact" },
   },
@@ -382,7 +378,7 @@ export const plotPresets = [
 // Per sq. ft. rates. The same card applies to every project type and city,
 // except where a city discount (Rs per sq. ft.) is listed below.
 export const rateCard = {
-  grey: { Standard: 2750, Premium: 3400, Luxury: 4200 },
+  grey: { Standard: 2950, Premium: 3600, Luxury: 4256 },
   finishing: { Standard: 2700, Premium: 3500, Luxury: 4000 },
   turnkey: { Standard: 5500, Premium: 6200, Luxury: 7000 },
   cities: ["Islamabad", "Lahore", "Rawalpindi", "Other"],

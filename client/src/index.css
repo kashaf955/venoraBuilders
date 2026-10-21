@@ -552,7 +552,12 @@ p { margin: 0 0 0.9rem; }
 .spec-actions { display: flex; gap: 1rem; align-items: center; margin-top: 0.6rem; }
 .center-link { margin-top: 1.8rem; text-align: center; }
 
-.method { background: var(--method) var(--structure) right -30px top -10px / 480px auto no-repeat; }
+.method {
+  background:
+    var(--structure) right -40px center / 640px auto no-repeat,
+    linear-gradient(165deg, color-mix(in srgb, var(--accent) 14%, var(--paper)) 0%, var(--method) 46%, var(--paper) 100%);
+  border-block: 1px solid var(--line);
+}
 .process {
   list-style: none;
   padding: 0.4rem 0 0;

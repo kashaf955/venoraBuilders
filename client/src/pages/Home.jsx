@@ -41,8 +41,8 @@ export default function Home() {
         <div className="wrap split intro-split">
           <figure className="badge-frame reveal">
             <img
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80"
-              alt="A contemporary tower"
+              src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=80"
+              alt="A building under construction"
             />
             <div className="year-badge">
               <strong>100,000+</strong>
@@ -55,11 +55,10 @@ export default function Home() {
             <p className="subhead">Your partners in construction, design, and handover.</p>
             <p className="lede">
               {company.legal} builds custom houses, commercial blocks, and turnkey projects from {company.headquarters}.
-              Grade-60 steel, a written bill of quantities, and a {company.warranty}.
+              Grade-60 steel, and a written bill of quantities.
             </p>
             <p>
-              Led by Chairman {company.leaders[0].name} and CEO {company.leaders[1].name}. An associated company of{" "}
-              {company.associate}.
+              Led by Chairman {company.leaders[0].name} and CEO {company.leaders[1].name}.
             </p>
             <Link className="btn" to="/about">
               Get to know us
@@ -132,7 +131,7 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head center reveal">
             <p className="kicker">Method</p>
-            <h2>Eight steps from the site walk to the keys</h2>
+            <h2>Seven steps from the site walk to the keys</h2>
             <p>One sequence on every job, from the first visit to handover.</p>
           </div>
           <ol className="process">
@@ -152,7 +151,7 @@ export default function Home() {
           <div className="section-head reveal">
             <p className="kicker">Standards</p>
             <h2>Why the cheapest rate is rarely the cheapest house</h2>
-            <p>The difference shows up in the steel, the schedule, and the warranty, not in the brochure.</p>
+            <p>The difference shows up in the steel, the schedule, and the handover.</p>
           </div>
           <div className="reason-grid">
             {reasons.map((item, index) => (
