@@ -20,18 +20,21 @@ const FINISH_SPLIT = [
 
 export function buildEstimate(input) {
   const kind = input.projectType === "commercial" ? "commercial" : "residential";
-  const level = rateCard[kind].grey[input.level] ? input.level : "Standard";
-  const cityFactor = rateCard.cities[input.city] ?? 1;
+  const level = rateCard.grey[input.level] ? input.level : "Standard";
+  const scope = ["grey", "finishing", "turnkey"].includes(input.scope) ? input.scope : "grey";
+  const discount = rateCard.cityDiscount[input.city] ?? 0;
   const storeys = Math.min(4, Math.max(1, Number(input.storeys) || 2));
   const covered = Math.min(80000, Math.max(600, Number(input.covered) || 0));
-  const greyRate = Math.round(rateCard[kind].grey[level] * cityFactor);
-  const finishRate = Math.round(rateCard[kind].finishing[level] * cityFactor);
 
-  const includeGrey = input.scope !== "finishing";
-  const includeFinish = input.scope === "complete" || input.scope === "turnkey";
-  const greyCost = includeGrey ? greyRate * covered : 0;
-  const finishCost = includeFinish ? finishRate * covered : 0;
-  const management = input.scope === "turnkey" ? Math.round((greyCost + finishCost) * 0.08) : 0;
+  // Turnkey is a single grey + finishing rate; the grey share is whatever the finishing rate leaves.
+  const rate = rateCard[scope][level] - discount;
+  const finishRate = scope === "grey" ? 0 : rateCard.finishing[level] - discount;
+  const greyRate = scope === "finishing" ? 0 : rate - finishRate;
+
+  const includeGrey = greyRate > 0;
+  const includeFinish = finishRate > 0;
+  const greyCost = greyRate * covered;
+  const finishCost = finishRate * covered;
 
   const lines = [];
   if (includeGrey) {
@@ -40,7 +43,6 @@ export function buildEstimate(input) {
   if (includeFinish) {
     FINISH_SPLIT.forEach(([label, share]) => lines.push({ label, amount: Math.round(finishCost * share) }));
   }
-  if (management) lines.push({ label: "Design, approvals & management", amount: management });
 
   const addons = [];
   if (input.basement && includeGrey) {
@@ -51,20 +53,20 @@ export function buildEstimate(input) {
     });
   }
   if (input.boundary) {
-    addons.push({ label: "Boundary wall & gate", amount: Math.round(rateCard.addons.boundary.flat * cityFactor) });
+    addons.push({ label: "Boundary wall & gate", amount: rateCard.addons.boundary.flat });
   }
   if (input.solar) {
     addons.push({ label: "Solar-ready electrical", amount: Math.round(rateCard.addons.solar.perSqft * covered) });
   }
   if (input.kitchen && includeFinish) {
-    addons.push({ label: "Premium kitchen", amount: Math.round(rateCard.addons.kitchen.flat * cityFactor) });
+    addons.push({ label: "Premium kitchen", amount: rateCard.addons.kitchen.flat });
   }
 
   const addonTotal = addons.reduce((sum, item) => sum + item.amount, 0);
-  const total = greyCost + finishCost + management + addonTotal;
+  const total = greyCost + finishCost + addonTotal;
   const months = Math.min(
     24,
-    Math.max(4, Math.round((covered / 750) * (input.scope === "grey" ? 0.65 : input.scope === "turnkey" ? 1.15 : 1)))
+    Math.max(4, Math.round((covered / 750) * (scope === "grey" ? 0.65 : scope === "finishing" ? 0.5 : 1.15)))
   );
 
   return {
@@ -72,13 +74,13 @@ export function buildEstimate(input) {
     storeys,
     city: input.city,
     level,
-    scope: input.scope,
+    scope,
     projectType: kind,
-    greyRate: includeGrey ? greyRate : 0,
-    finishRate: includeFinish ? finishRate : 0,
+    rate,
+    greyRate,
+    finishRate,
     greyCost,
     finishCost,
-    management,
     addons,
     lines,
     total,

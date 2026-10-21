@@ -8,6 +8,8 @@ export const company = {
   email: "info@venorabuilders.com",
   phones: ["+92 308 6176888", "+92 335 5591217"],
   whatsapp: "923086176888",
+  // Add Facebook, Instagram, LinkedIn, etc. here as { label, url }.
+  socials: [{ label: "WhatsApp", url: "https://wa.me/923086176888" }],
   website: "https://venorabuilders.com",
   greyRateFrom: 2750,
   warranty: "15-year structural warranty",
@@ -371,27 +373,20 @@ export const slides = [
 
 export const plotPresets = [
   { id: "5-marla", label: "5 Marla", covered: 1650 },
+  { id: "8-marla", label: "8 Marla", covered: 2350 },
   { id: "10-marla", label: "10 Marla", covered: 2800 },
-  { id: "1-kanal", label: "1 Kanal", covered: 4500 },
-  { id: "2-kanal", label: "2 Kanal", covered: 7800 },
+  { id: "14-marla", label: "14 Marla", covered: 3700 },
   { id: "custom", label: "Custom area", covered: 3000 },
 ];
 
+// Per sq. ft. rates. The same card applies to every project type and city,
+// except where a city discount (Rs per sq. ft.) is listed below.
 export const rateCard = {
-  residential: {
-    grey: { Standard: 2750, Premium: 3400, Luxury: 4200 },
-    finishing: { Standard: 2400, Premium: 3600, Luxury: 5200 },
-  },
-  commercial: {
-    grey: { Standard: 3100, Premium: 3800, Luxury: 4600 },
-    finishing: { Standard: 2200, Premium: 3200, Luxury: 4500 },
-  },
-  cities: {
-    Lahore: 1,
-    Islamabad: 1.06,
-    Rawalpindi: 0.98,
-    Other: 1.04,
-  },
+  grey: { Standard: 2750, Premium: 3400, Luxury: 4200 },
+  finishing: { Standard: 2700, Premium: 3500, Luxury: 4000 },
+  turnkey: { Standard: 5500, Premium: 6200, Luxury: 7000 },
+  cities: ["Islamabad", "Lahore", "Rawalpindi", "Other"],
+  cityDiscount: { Rawalpindi: 100 },
   addons: {
     basement: { label: "Basement", factor: 0.42, note: "Applied to one floor of covered area" },
     boundary: { label: "Boundary wall & gate", flat: 850000 },

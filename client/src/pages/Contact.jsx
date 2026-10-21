@@ -45,6 +45,16 @@ export default function Contact() {
               </p>
               <p>Ask for {company.leaders[1].name}, CEO, or {company.leaders[0].name}, Chairman.</p>
             </article>
+            <article className="reveal">
+              <h2>Socials</h2>
+              {company.socials.map((social) => (
+                <p key={social.label}>
+                  <a href={social.url} target="_blank" rel="noreferrer">
+                    {social.label}
+                  </a>
+                </p>
+              ))}
+            </article>
           </div>
           <InquiryForm source="contact" interest={interest} />
         </div>

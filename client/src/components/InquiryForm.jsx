@@ -1,17 +1,6 @@
 import { useEffect, useState } from "react";
 import { company } from "@shared/content.js";
 
-const interests = [
-  "Grey structure",
-  "Turnkey house",
-  "Commercial project",
-  "Architectural design",
-  "Interior design",
-  "Renovation",
-  "Consultancy",
-  "Other",
-];
-
 export default function InquiryForm({
   source = "contact",
   interest = "General",
@@ -21,14 +10,11 @@ export default function InquiryForm({
   const [form, setForm] = useState({
     name: "",
     phone: "",
-    email: "",
-    city: "Islamabad",
     interest,
     message: "",
   });
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState("");
-  const options = interests.includes(form.interest) ? interests : [form.interest, ...interests];
 
   useEffect(() => {
     if (!interest) return;
@@ -77,28 +63,8 @@ export default function InquiryForm({
         <input name="name" value={form.name} onChange={update} required autoComplete="name" />
       </label>
       <label>
-        Phone
+        Phone number
         <input name="phone" value={form.phone} onChange={update} required autoComplete="tel" placeholder="03xx xxx xxxx" />
-      </label>
-      <label>
-        Email
-        <input name="email" type="email" value={form.email} onChange={update} autoComplete="email" />
-      </label>
-      <label>
-        City
-        <select name="city" value={form.city} onChange={update}>
-          {company.regions.concat("Other").map((city) => (
-            <option key={city}>{city}</option>
-          ))}
-        </select>
-      </label>
-      <label className="full">
-        Interested in
-        <select name="interest" value={form.interest} onChange={update}>
-          {options.map((item) => (
-            <option key={item}>{item}</option>
-          ))}
-        </select>
       </label>
       <label className="full">
         Message

@@ -10,7 +10,7 @@ const initial = {
   plot: "10-marla",
   covered: 2800,
   storeys: 2,
-  scope: "grey",
+  scope: "turnkey",
   level: "Standard",
   basement: false,
   boundary: false,
@@ -51,7 +51,7 @@ export default function Calculator() {
       <PageHero
         kicker="Construction calculator"
         title="A first number before the bill of quantities."
-        text="Built from Venora’s published grey-structure starting rate of Rs 2,750 per sq. ft. The figure is a planning range, not a contract."
+        text="Turnkey (grey + finishing) from Rs 5,500 per sq. ft. and finishing only from Rs 2,700 per sq. ft. The figure is a planning range, not a contract."
         image="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=80"
       />
       <section className="section">
@@ -74,7 +74,7 @@ export default function Calculator() {
             <label>
               City
               <select value={input.city} onChange={(event) => setField("city", event.target.value)}>
-                {Object.keys(rateCard.cities).map((city) => (
+                {rateCard.cities.map((city) => (
                   <option key={city}>{city}</option>
                 ))}
               </select>
@@ -118,9 +118,9 @@ export default function Calculator() {
               <legend>Scope</legend>
               <div className="choice-row wrap-choices">
                 {[
+                  ["turnkey", "Grey + finishing (turnkey)"],
+                  ["finishing", "Finishing only"],
                   ["grey", "Grey structure"],
-                  ["complete", "Grey + finishing"],
-                  ["turnkey", "Full turnkey"],
                 ].map(([value, label]) => (
                   <button key={value} type="button" className={input.scope === value ? "on" : ""} onClick={() => setField("scope", value)}>
                     {label}
@@ -138,32 +138,43 @@ export default function Calculator() {
                   </button>
                 ))}
               </div>
-              <p className="fine">Standard grey structure starts at the published Rs 2,750 / sq. ft. before the city adjustment.</p>
+              <p className="fine">
+                {input.scope === "grey" ? "Grey structure" : input.scope === "finishing" ? "Finishing only" : "Turnkey"} at{" "}
+                {input.level} is {money(result.rate)} / sq. ft.
+                {rateCard.cityDiscount[input.city] ? ` (Rs ${rateCard.cityDiscount[input.city]} less in ${input.city}).` : "."}
+              </p>
             </fieldset>
 
             <fieldset>
               <legend>Add-ons</legend>
-              <label className="check">
-                <input type="checkbox" checked={input.basement} onChange={(event) => setField("basement", event.target.checked)} />
-                Basement
-              </label>
-              <label className="check">
-                <input type="checkbox" checked={input.boundary} onChange={(event) => setField("boundary", event.target.checked)} />
-                Boundary wall and gate
-              </label>
-              <label className="check">
-                <input type="checkbox" checked={input.solar} onChange={(event) => setField("solar", event.target.checked)} />
-                Solar-ready electrical
-              </label>
-              <label className="check">
-                <input
-                  type="checkbox"
-                  checked={input.kitchen}
-                  disabled={input.scope === "grey"}
-                  onChange={(event) => setField("kitchen", event.target.checked)}
-                />
-                Premium kitchen
-              </label>
+              <div className="addon-grid">
+                <label className="check">
+                  <input
+                    type="checkbox"
+                    checked={input.basement}
+                    disabled={input.scope === "finishing"}
+                    onChange={(event) => setField("basement", event.target.checked)}
+                  />
+                  Basement
+                </label>
+                <label className="check">
+                  <input type="checkbox" checked={input.boundary} onChange={(event) => setField("boundary", event.target.checked)} />
+                  Boundary wall and gate
+                </label>
+                <label className="check">
+                  <input type="checkbox" checked={input.solar} onChange={(event) => setField("solar", event.target.checked)} />
+                  Solar-ready electrical
+                </label>
+                <label className="check">
+                  <input
+                    type="checkbox"
+                    checked={input.kitchen}
+                    disabled={input.scope === "grey"}
+                    onChange={(event) => setField("kitchen", event.target.checked)}
+                  />
+                  Premium kitchen
+                </label>
+              </div>
             </fieldset>
           </form>
 
@@ -175,6 +186,10 @@ export default function Calculator() {
               <div>
                 <dt>Covered area</dt>
                 <dd>{result.covered.toLocaleString("en-PK")} sq. ft.</dd>
+              </div>
+              <div>
+                <dt>Rate</dt>
+                <dd>{money(result.rate)} / sq. ft.</dd>
               </div>
               <div>
                 <dt>Grey rate</dt>
