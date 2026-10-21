@@ -19,7 +19,7 @@ export default function Projects() {
         kicker="Our projects"
         title="Houses, plazas, and the structures between them."
         text="A selection of delivered and active Venora work. Open a project for the brief and the services used."
-        image="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=2000&q=80"
+        image="/projects/brick-house.jpg"
       />
       <section className="section">
         <div className="wrap">

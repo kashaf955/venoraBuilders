@@ -553,11 +553,7 @@ p { margin: 0 0 0.9rem; }
 .center-link { margin-top: 1.8rem; text-align: center; }
 
 .method {
-  background:
-    var(--structure) right -20px center / 520px auto no-repeat,
-    linear-gradient(color-mix(in srgb, var(--accent) 22%, transparent) 1px, transparent 1px) 0 0 / 100% 28px,
-    linear-gradient(90deg, color-mix(in srgb, var(--accent) 16%, transparent) 1px, transparent 1px) 0 0 / 28px 100%,
-    linear-gradient(180deg, color-mix(in srgb, var(--navy) 7%, var(--paper)), var(--paper));
+  background: var(--method);
   border-block: 1px solid var(--line);
 }
 .process {
@@ -805,6 +801,20 @@ blockquote span { color: var(--muted); font-size: 0.88rem; }
 }
 .filters button.on, .choice-row button.on { background: var(--accent); color: white; border-color: var(--accent); }
 .project-grid, .project-grid.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.15rem; }
+.project-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-top: 2.4rem;
+}
+.project-gallery figure { margin: 0; }
+.project-gallery img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
 .project-card span { color: var(--accent-deep); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .project-detail { grid-template-columns: 1.3fr 0.7fr; align-items: start; }
 .fact-card, .calc-panel, .estimate, .form, .form-success, .contact-facts article { padding: 1.3rem; }
@@ -953,7 +963,8 @@ textarea { resize: vertical; }
   }
   .standards .reason-grid article { grid-template-columns: 2.1rem minmax(0, 1fr); gap: 0.7rem; }
   .standards .reason-grid h3 { font-size: 1.05rem; }
-  .form, .pair, .spec-card ul, .project-grid, .project-grid.gallery, .milestones .stat-band { grid-template-columns: 1fr; }
+  .form, .pair, .spec-card ul, .project-grid, .project-grid.gallery, .project-gallery, .milestones .stat-band { grid-template-columns: 1fr; }
+  .project-gallery img { height: 240px; }
   .footer { padding-bottom: 7rem; }
   .footer-base { flex-direction: column; }
   .mobile-bar {

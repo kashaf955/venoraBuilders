@@ -69,6 +69,15 @@ export default function ProjectDetail() {
             </dl>
           </aside>
         </div>
+        {project.gallery?.length ? (
+          <div className="wrap project-gallery">
+            {project.gallery.map((shot) => (
+              <figure key={shot.src}>
+                <img src={shot.src} alt={shot.alt} />
+              </figure>
+            ))}
+          </div>
+        ) : null}
         {related.length ? (
           <div className="wrap related">
             <h2>Related work</h2>
