@@ -327,15 +327,15 @@ export const reasons = [
 
 export const slides = [
   {
-    image: "/projects/arched-drive.jpg",
-    kicker: "Turnkey residence",
-    title: "Arched Villa",
-    text: "A finished family house, from the gate to the drawing room.",
-    primary: { label: "View project", to: "/projects/arched-villa" },
+    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=2200&q=80",
+    kicker: "Islamabad & Rawalpindi",
+    title: "Building trust. Creating landmarks.",
+    text: "Houses, grey structure, and turnkey work from one team.",
+    primary: { label: "Our projects", to: "/projects" },
     secondary: { label: "Inquire now", to: "/contact" },
   },
   {
-    image: "/projects/brick-house.jpg",
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2200&q=80",
     kicker: "Residential grey structure",
     title: "From Rs 2,950 / sq. ft.",
     text: "Foundations, reinforced concrete, and roof slabs with Grade-60 steel.",
@@ -343,20 +343,20 @@ export const slides = [
     secondary: { label: "Grey structure", to: "/services#grey-structure" },
   },
   {
-    image: "/projects/stone-entrance.jpg",
-    kicker: "Stone and plaster",
-    title: "Stone Corner House",
-    text: "A stone-clad entrance, a carved door, and a glass balcony.",
-    primary: { label: "View project", to: "/projects/stone-corner-house" },
-    secondary: { label: "Get a quote", to: "/contact" },
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=2200&q=80",
+    kicker: "Design to handover",
+    title: "Turnkey homes",
+    text: "Drawings, approvals, structure, and finishes under one team.",
+    primary: { label: "Our services", to: "/services" },
+    secondary: { label: "Book a consultation", to: "/contact" },
   },
   {
-    image: "/projects/slab-pour.jpg",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=80",
     kicker: "On site",
-    title: "Roof Slab",
-    text: "Shuttering, props, and the frame, photographed on the job.",
-    primary: { label: "View project", to: "/projects/roof-slab" },
-    secondary: { label: "Book a consultation", to: "/contact" },
+    title: "The frame, then the finish.",
+    text: "The houses and slabs are in the project gallery.",
+    primary: { label: "View projects", to: "/projects" },
+    secondary: { label: "Get a quote", to: "/contact" },
   },
 ];
 
