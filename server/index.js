@@ -75,6 +75,7 @@ app.post("/api/inquiries", async (req, res) => {
   if (!/^[0-9+\-\s()]{10,20}$/.test(phone)) {
     return res.status(400).json({ error: "Please enter a valid phone number." });
   }
+  if (message.length < 2) return res.status(400).json({ error: "Please enter a message." });
   if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return res.status(400).json({ error: "Please enter a valid email address." });
   }

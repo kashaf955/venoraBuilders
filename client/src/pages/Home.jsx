@@ -89,7 +89,7 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head center reveal">
             <p className="kicker">Featured</p>
-            <h2>Developments across Lahore and Islamabad</h2>
+            <h2>Developments across Islamabad and Rawalpindi</h2>
             <p>Signature houses and commercial frames.</p>
           </div>
           <div className="feature-grid">

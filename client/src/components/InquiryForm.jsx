@@ -59,16 +59,16 @@ export default function InquiryForm({
   return (
     <form className="form" onSubmit={onSubmit}>
       <label>
-        Name
+        Name<span className="req">*</span>
         <input name="name" value={form.name} onChange={update} required autoComplete="name" />
       </label>
       <label>
-        Phone number
+        Phone number<span className="req">*</span>
         <input name="phone" value={form.phone} onChange={update} required autoComplete="tel" placeholder="03xx xxx xxxx" />
       </label>
       <label className="full">
-        Message
-        <textarea name="message" rows="5" value={form.message} onChange={update} placeholder="Plot size, location, and what you want built." />
+        Message<span className="req">*</span>
+        <textarea name="message" rows="5" value={form.message} onChange={update} required placeholder="Plot size, location, and what you want built." />
       </label>
       {error ? <p className="form-error full">{error}</p> : null}
       <div className="full form-actions">

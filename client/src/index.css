@@ -554,8 +554,10 @@ p { margin: 0 0 0.9rem; }
 
 .method {
   background:
-    var(--structure) right -40px center / 640px auto no-repeat,
-    linear-gradient(165deg, color-mix(in srgb, var(--accent) 14%, var(--paper)) 0%, var(--method) 46%, var(--paper) 100%);
+    var(--structure) right -20px center / 520px auto no-repeat,
+    linear-gradient(color-mix(in srgb, var(--accent) 22%, transparent) 1px, transparent 1px) 0 0 / 100% 28px,
+    linear-gradient(90deg, color-mix(in srgb, var(--accent) 16%, transparent) 1px, transparent 1px) 0 0 / 28px 100%,
+    linear-gradient(180deg, color-mix(in srgb, var(--navy) 7%, var(--paper)), var(--paper));
   border-block: 1px solid var(--line);
 }
 .process {
@@ -602,7 +604,7 @@ p { margin: 0 0 0.9rem; }
 .process h3 { margin: 0 0 0.35rem; font-size: 1.05rem; }
 .process p { margin: 0; color: var(--muted); font-size: 0.92rem; }
 
-.method .process span { background: var(--method); }
+.method .process span { background: var(--paper); }
 .reason-grid { grid-template-columns: repeat(3, 1fr); }
 .reason-grid article { padding: 1.25rem; }
 .reason-grid h3 { font-size: 1.1rem; }
@@ -820,8 +822,9 @@ dd { margin: 0; text-align: right; color: var(--ink); }
 .calc-panel legend { font-family: var(--display); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.45rem; }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
 label { display: grid; gap: 0.35rem; margin-bottom: 0.85rem; font-size: 0.92rem; color: var(--navy); }
+.req { color: var(--accent-deep); margin-left: 0.2rem; font-weight: 700; }
 label.check { display: flex; align-items: center; gap: 0.6rem; }
-.addon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+.addon-grid { display: grid; grid-template-columns: 1fr; gap: 0.6rem; justify-items: stretch; }
 .addon-grid label.check {
   margin: 0;
   padding: 0.75rem 0.85rem;

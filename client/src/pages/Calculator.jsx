@@ -141,7 +141,9 @@ export default function Calculator() {
               <p className="fine">
                 {input.scope === "grey" ? "Grey structure" : input.scope === "finishing" ? "Finishing only" : "Turnkey"} at{" "}
                 {input.level} is {money(result.rate)} / sq. ft.
-                {rateCard.cityDiscount[input.city] ? ` (Rs ${rateCard.cityDiscount[input.city]} less in ${input.city}).` : "."}
+                {rateCard.cityDiscount[input.city]
+                  ? ` (Rs ${rateCard.cityDiscount[input.city]} less than the Islamabad rate).`
+                  : "."}
               </p>
             </fieldset>
 

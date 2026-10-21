@@ -4,12 +4,14 @@ export const company = {
   tagline: "Building Trust. Creating Landmarks.",
   founded: 2019,
   headquarters: "Islamabad, Pakistan",
-  regions: ["Islamabad", "Rawalpindi", "Lahore"],
+  regions: ["Islamabad", "Rawalpindi"],
   email: "info@venorabuilders.com",
   phones: ["+92 308 6176888"],
   whatsapp: "923086176888",
-  // Add Facebook, Instagram, LinkedIn, etc. here as { label, url }.
-  socials: [{ label: "WhatsApp", url: "https://wa.me/923086176888" }],
+  socials: [
+    { label: "WhatsApp", url: "https://wa.me/923086176888" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/company/venora-builders" },
+  ],
   website: "https://venorabuilders.com",
   greyRateFrom: 2950,
   leaders: [
@@ -65,7 +67,7 @@ export const highlights = [
 export const pillars = [
   {
     title: "As a builder",
-    text: "Grey structure and turnkey construction across Islamabad, Rawalpindi, and Lahore. Foundations, reinforced concrete, masonry, and finishing under one supervised team.",
+    text: "Grey structure and turnkey construction in Islamabad and Rawalpindi. Foundations, reinforced concrete, masonry, and finishing under one supervised team.",
   },
   {
     title: "As a designer",
@@ -83,7 +85,7 @@ export const services = [
     code: "01",
     title: "Construction Services",
     summary:
-      "Premium residential construction, custom villas, and structural execution in Islamabad, Rawalpindi, and DHA sectors.",
+      "Premium residential construction, custom villas, and structural execution in Islamabad and Rawalpindi.",
     detail:
       "We take a house from excavated ground to a structure you can finish or occupy. Scope covers layout coordination, concrete frames, brickwork, and site supervision by engineers who stay on the job, not only on the drawing.",
     points: ["Custom villas and family homes", "DHA, Bahria, and city sectors", "Supervised pours and material logs"],
@@ -190,23 +192,6 @@ export const services = [
 
 export const projects = [
   {
-    slug: "the-obsidian-house",
-    title: "The Obsidian House",
-    category: "Residential",
-    status: "Completed",
-    location: "DHA Phase 6, Lahore",
-    plot: "Custom villa",
-    area: "Luxury residence",
-    year: "Delivered",
-    image:
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1800&q=80",
-    summary:
-      "A custom villa in DHA Phase 6, built on sandy soil that required deep piles and a reinforced basement raft.",
-    story:
-      "The sandy soil on this DHA Phase 6 plot called for deep piles and a reinforced concrete basement raft. During finishing, marble supply had to be sequenced so the handover date held. The house was completed as a luxury residence with the structure documented through the pour.",
-    services: ["Grey structure", "Turnkey", "Architectural design"],
-  },
-  {
     slug: "akbar-vista",
     title: "Akbar Vista",
     category: "Commercial",
@@ -224,23 +209,6 @@ export const projects = [
     services: ["Commercial construction", "Project management"],
   },
   {
-    slug: "dha-phase-6-executive-villa",
-    title: "Executive Villa",
-    category: "Residential",
-    status: "Completed",
-    location: "DHA Phase 6, Lahore",
-    plot: "1 Kanal",
-    area: "Family home",
-    year: "Delivered",
-    image:
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1800&q=80",
-    summary:
-      "A 1-kanal executive villa delivered on the agreed schedule, with weekly progress shared with the owner.",
-    story:
-      "The owner needed a 1-kanal home in DHA Phase 6 and a record of the work while it was underway. Weekly updates, concrete testing, and a fixed milestone plan carried the house through to handover.",
-    services: ["Turnkey", "Grey structure"],
-  },
-  {
     slug: "gulberg-greens-plaza",
     title: "Gulberg Greens Plaza",
     category: "Commercial",
@@ -252,9 +220,9 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=80",
     summary:
-      "Core structural concrete for a retail plaza, run to a published schedule and site safety rules.",
+      "Core structural concrete for a retail plaza in Islamabad, run to a published schedule and site safety rules.",
     story:
-      "The commission covered the structural concrete of a retail plaza. The value to the client was a frame poured to specification, with material use recorded against the bill of quantities.",
+      "The commission covered the structural concrete of a retail plaza in Gulberg Greens. The frame was poured to specification, with material use recorded against the bill of quantities.",
     services: ["Commercial construction", "Grey structure"],
   },
   {
@@ -269,27 +237,10 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=1800&q=80",
     summary:
-      "An interior remodel of a family villa: glass, stone, and lighting planned with the existing rooms.",
+      "An interior remodel of a family villa in Bahria Town: glass, stone, and lighting planned with the existing rooms.",
     story:
-      "The brief was to raise the value of a standing villa without pretending it was a new building. Partitions, marble, and lighting were redesigned around the rooms the family already used.",
+      "The brief was to raise the value of a standing villa in Bahria Town, Islamabad. Partitions, marble, and lighting were redesigned around the rooms the family already used.",
     services: ["Interior design", "Renovation"],
-  },
-  {
-    slug: "residential-grey-programme",
-    title: "Residential Grey Structure",
-    category: "Grey Structure",
-    status: "Ongoing",
-    location: "Islamabad, Rawalpindi & Lahore",
-    plot: "5 Marla to 1 Kanal+",
-    area: "From Rs 2,950 / sq. ft.",
-    year: "Active",
-    image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80",
-    summary:
-      "Ongoing residential grey-structure work: foundations, frames, brickwork, and roof slabs at a published starting rate.",
-    story:
-      "This is Venora’s core residential line. Houses are taken through excavation, foundation, reinforced concrete, masonry, and slab, with Grade-60 steel and a starting rate of Rs 2,950 per square foot.",
-    services: ["Grey structure", "Project management"],
   },
 ];
 
@@ -298,7 +249,7 @@ export const testimonials = [
     quote:
       "Our 10-marla house in DHA was taken to roof slab on the dates we set. We saw the steel and the concrete tests before the next pour.",
     name: "Usman Khalid",
-    meta: "Home owner, DHA Phase 6, Lahore",
+    meta: "Home owner, DHA Islamabad",
   },
   {
     quote:
@@ -319,7 +270,7 @@ export const process = [
   { step: "02", title: "Site & soil", text: "Walk the plot, check structure feasibility, and note authority rules." },
   { step: "03", title: "Design", text: "Floor plans and elevations you can approve before a rupee of concrete." },
   { step: "04", title: "BOQ", text: "A line-by-line bill of quantities. The calculator on this site is only a first sketch." },
-  { step: "05", title: "Approvals", text: "Authority drawings for DHA, CDA, or RDA, filed before excavation starts." },
+  { step: "05", title: "Approvals", text: "Authority drawings for CDA or RDA, filed before excavation starts." },
   { step: "06", title: "Inspection", text: "Concrete tests, leakage checks, and a snagging list before handover." },
   { step: "07", title: "Handover", text: "Clean site, a walkthrough of the work, and the keys." },
 ];
@@ -329,16 +280,16 @@ export const reasons = [
   { title: "Known materials", text: "Grade-60 steel, specified cement, and bricks from traceable sources." },
   { title: "Open pricing", text: "A bill of quantities you can read. Changes are written, not absorbed quietly." },
   { title: "A dated schedule", text: "Milestones are set before work starts and reported while it runs." },
-  { title: "Seismic-aware frames", text: "Islamabad and Rawalpindi houses are detailed for lateral load, not copied from a Lahore template." },
+  { title: "CDA and RDA drawings", text: "Plans are filed with CDA or RDA before the first excavation." },
 ];
 
 export const slides = [
   {
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=2200&q=80",
-    kicker: "DHA Phase 6, Lahore",
-    title: "The Obsidian House",
-    text: "A custom villa on deep piles, finished as a luxury residence.",
-    primary: { label: "View project", to: "/projects/the-obsidian-house" },
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2200&q=80",
+    kicker: "Bahria Enclave, Islamabad",
+    title: "Akbar Vista",
+    text: "A commercial frame detailed for Islamabad’s seismic zone and CDA rules.",
+    primary: { label: "View project", to: "/projects/akbar-vista" },
     secondary: { label: "Inquire now", to: "/contact" },
   },
   {
@@ -350,11 +301,11 @@ export const slides = [
     secondary: { label: "Grey structure", to: "/services#grey-structure" },
   },
   {
-    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2200&q=80",
-    kicker: "Bahria Enclave, Islamabad",
-    title: "Akbar Vista",
-    text: "A commercial frame detailed for Islamabad’s seismic zone.",
-    primary: { label: "View project", to: "/projects/akbar-vista" },
+    image: "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=2200&q=80",
+    kicker: "Gulberg Greens, Islamabad",
+    title: "Gulberg Greens Plaza",
+    text: "A retail frame poured to a published schedule.",
+    primary: { label: "View project", to: "/projects/gulberg-greens-plaza" },
     secondary: { label: "Get a quote", to: "/contact" },
   },
   {
@@ -368,20 +319,20 @@ export const slides = [
 ];
 
 export const plotPresets = [
-  { id: "5-marla", label: "5 Marla", covered: 1650 },
-  { id: "8-marla", label: "8 Marla", covered: 2350 },
-  { id: "10-marla", label: "10 Marla", covered: 2800 },
-  { id: "14-marla", label: "14 Marla", covered: 3700 },
+  { id: "5-marla", label: "5 Marla house", covered: 1650 },
+  { id: "8-marla", label: "8 Marla house", covered: 2350 },
+  { id: "10-marla", label: "10 Marla house", covered: 2800 },
+  { id: "14-marla", label: "14 Marla house", covered: 3700 },
   { id: "custom", label: "Custom area", covered: 3000 },
 ];
 
 // Per sq. ft. rates. The same card applies to every project type and city,
 // except where a city discount (Rs per sq. ft.) is listed below.
 export const rateCard = {
-  grey: { Standard: 2950, Premium: 3600, Luxury: 4256 },
-  finishing: { Standard: 2700, Premium: 3500, Luxury: 4000 },
+  grey: { Standard: 2950, Premium: 3600, Luxury: 4250 },
+  finishing: { Standard: 2700, Premium: 3500, Luxury: 4100 },
   turnkey: { Standard: 5500, Premium: 6200, Luxury: 7000 },
-  cities: ["Islamabad", "Lahore", "Rawalpindi", "Other"],
+  cities: ["Islamabad", "Rawalpindi"],
   cityDiscount: { Rawalpindi: 100 },
   addons: {
     basement: { label: "Basement", factor: 0.42, note: "Applied to one floor of covered area" },

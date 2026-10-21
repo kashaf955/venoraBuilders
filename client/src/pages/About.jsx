@@ -22,7 +22,7 @@ export default function About() {
             from Rs 2,950 per square foot.
           </p>
           <p>
-            Drawings follow the plot and the authority that governs it — DHA, CDA, RDA, or the local body. Concrete is
+            Drawings follow the plot and the authority that governs it — CDA or RDA. Concrete is
             specified and tested before the next pour. Clients in {company.regions.join(", ")} get a bill of quantities
             they can read while the site is live.
           </p>
@@ -72,7 +72,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section method">
         <div className="wrap">
           <div className="section-head reveal">
             <p className="kicker">Method</p>
