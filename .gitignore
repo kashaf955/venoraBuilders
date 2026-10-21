@@ -4,3 +4,4 @@ dist/
 *.log
 server/data/inquiries.json
 .DS_Store
+venora-static.zip
