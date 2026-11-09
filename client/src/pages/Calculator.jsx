@@ -51,7 +51,7 @@ export default function Calculator() {
       <PageHero
         kicker="Construction calculator"
         title="A first number before the bill of quantities."
-        text="Turnkey (grey + finishing) from Rs 5,500 per sq. ft. and finishing only from Rs 2,700 per sq. ft. The figure is a planning range, not a contract."
+        text="Grey structure starting from Rs 2,950 per sq. ft., turnkey (grey + finishing) from Rs 5,500 per sq. ft. and finishing only from Rs 2,700 per sq. ft. The figure is a planning range, not a contract."
         image="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=80"
       />
       <section className="section">

@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import PageHero from "../components/PageHero.jsx";
 import InquiryForm from "../components/InquiryForm.jsx";
+import SocialIcons from "../components/SocialIcons.jsx";
 import { company } from "@shared/content.js";
 
 export default function Contact() {
@@ -43,17 +44,10 @@ export default function Contact() {
               <p>
                 <a href={`mailto:${company.email}`}>{company.email}</a>
               </p>
-              <p>Ask for {company.leaders[1].name}, CEO, or {company.leaders[0].name}, Chairman.</p>
             </article>
             <article className="reveal">
               <h2>Socials</h2>
-              {company.socials.map((social) => (
-                <p key={social.label}>
-                  <a href={social.url} target="_blank" rel="noreferrer">
-                    {social.label}
-                  </a>
-                </p>
-              ))}
+              <SocialIcons />
             </article>
           </div>
           <InquiryForm source="contact" interest={interest} />

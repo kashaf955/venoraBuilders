@@ -645,7 +645,7 @@ blockquote span { color: var(--muted); font-size: 0.88rem; }
 .milestones {
   position: relative;
   isolation: isolate;
-  background: #0a1d3b url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80") center/cover;
+  background: #0a1d3b url("/projects/arched-drive.jpg") center/cover;
   color: white;
   padding: 5.2rem 0;
   overflow: hidden;
@@ -700,7 +700,7 @@ blockquote span { color: var(--muted); font-size: 0.88rem; }
 .band {
   position: relative;
   color: white;
-  background: #0c244a url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80") center/cover;
+  background: #0c244a url("/projects/arched-angle.jpg") center/cover;
 }
 .band::before { content: ""; position: absolute; inset: 0; background: rgba(10, 28, 44, 0.82); }
 .band-inner { position: relative; display: grid; grid-template-columns: 1.4fr auto; gap: 2rem; align-items: center; padding: 4.2rem 0; }
@@ -866,6 +866,21 @@ textarea { resize: vertical; }
 .contact-layout { grid-template-columns: 0.8fr 1.2fr; align-items: start; }
 .contact-facts { display: grid; gap: 0.8rem; }
 .contact-facts a { color: var(--accent-deep); font-weight: 600; }
+.social-icons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.6rem; }
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  color: var(--accent-deep);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.social-icons a:hover { background: var(--accent); border-color: var(--accent); color: white; }
+.footer .social-icons a { border-color: rgba(255,255,255,.25); color: rgba(255,255,255,.85); }
+.footer .social-icons a:hover { background: var(--accent); border-color: var(--accent); color: white; }
 .form { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.8rem; }
 .form .full { grid-column: 1 / -1; }
 .form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; }

@@ -18,8 +18,8 @@ export default function About() {
           <h2>Houses, plazas, and the paperwork that keeps both honest.</h2>
           <p className="lede">
             Venora takes residential and commercial work from consultation through handover. The public record is
-            straightforward: more than 100,000 square feet constructed, 140 clients, and grey-structure rates published
-            from Rs 2,950 per square foot.
+            straightforward: more than 100,000 square feet constructed, 140 clients, and grey-structure rates
+            starting from Rs 2,950 per sq. ft.
           </p>
           <p>
             Drawings follow the plot and the authority that governs it — CDA or RDA. Concrete is

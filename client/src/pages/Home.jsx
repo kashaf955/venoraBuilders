@@ -41,8 +41,8 @@ export default function Home() {
         <div className="wrap split intro-split">
           <figure className="badge-frame reveal">
             <img
-              src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=80"
-              alt="A building under construction"
+              src="/projects/slab-pour.jpg"
+              alt="A roof slab being poured on a Venora site"
             />
             <div className="year-badge">
               <strong>100,000+</strong>

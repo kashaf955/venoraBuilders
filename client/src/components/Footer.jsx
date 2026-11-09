@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { company } from "@shared/content.js";
+import SocialIcons from "./SocialIcons.jsx";
 
 export default function Footer() {
   return (
@@ -26,11 +27,7 @@ export default function Footer() {
               <a href={`tel:${phone.replace(/\s/g, "")}`}>{phone}</a>
             </p>
           ))}
-          {company.socials.map((social) => (
-            <a key={social.label} href={social.url} target="_blank" rel="noreferrer">
-              {social.label}
-            </a>
-          ))}
+          <SocialIcons className="on-dark" />
         </div>
         <div>
           <h2>Pages</h2>

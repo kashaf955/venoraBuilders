@@ -10,6 +10,7 @@ export const company = {
   whatsapp: "923086176888",
   socials: [
     { label: "WhatsApp", url: "https://wa.me/923086176888" },
+    { label: "Instagram", url: "https://www.instagram.com/venorabuilders" },
     { label: "LinkedIn", url: "https://www.linkedin.com/company/venora-builders" },
   ],
   website: "https://venorabuilders.com",
@@ -34,13 +35,13 @@ export const stats = [
   { value: "100,000+", label: "Sq. ft. constructed" },
   { value: "140+", label: "Clients served" },
   { value: "2019", label: "Established" },
-  { value: "Rs 2,950", label: "Grey structure, per sq. ft." },
+  { value: "Rs 2,950", label: "Starting from, per sq. ft." },
 ];
 
 export const highlights = [
   {
     kicker: "Residential",
-    title: "Grey structure from Rs 2,950 / sq. ft.",
+    title: "Grey structure starting from Rs 2,950 per sq. ft.",
     text: "Grade-60 steel, supervised pours, and a rate you can see before the first meeting.",
     to: "/calculator",
     link: "View details",
@@ -90,7 +91,7 @@ export const services = [
       "We take a house from excavated ground to a structure you can finish or occupy. Scope covers layout coordination, concrete frames, brickwork, and site supervision by engineers who stay on the job, not only on the drawing.",
     points: ["Custom villas and family homes", "DHA, Bahria, and city sectors", "Supervised pours and material logs"],
     image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80",
+      "/projects/slab-crew.jpg",
   },
   {
     slug: "commercial",
@@ -114,7 +115,7 @@ export const services = [
       "The grey structure is the part of the building you cannot cheaply redo. We specify Grade-60 deformed steel, known cement sources, and cylinder testing so the frame matches the drawing.",
     points: ["Published starting rate", "Grade-60 reinforcement", "Foundation to roof slab"],
     image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80",
+      "/projects/slab-pour.jpg",
   },
   {
     slug: "turnkey",
@@ -126,7 +127,7 @@ export const services = [
       "Turnkey means one party owns the sequence: drawings, permissions, construction, finishes, and the day you receive the keys. The bill of quantities stays visible through the job.",
     points: ["One contract, one schedule", "Approvals liaison", "Finish and handover"],
     image:
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1600&q=80",
+      "/projects/arched-drive.jpg",
   },
   {
     slug: "architecture",
@@ -138,7 +139,7 @@ export const services = [
       "Plans are drawn for the plot you own: sun, access, bylaws, and the rooms you will actually live in. Elevations follow the structure, so the facade is buildable.",
     points: ["Working floor plans", "Front elevations", "Bylaw-aware layouts"],
     image:
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80",
+      "/projects/stone-entrance.jpg",
   },
   {
     slug: "interiors",
@@ -150,7 +151,7 @@ export const services = [
       "Interiors are coordinated with the structure: wet areas, electrical points, and ceiling heights are decided before plaster locks them in. The result is a finished room, not a catalogue pasted onto a shell.",
     points: ["Kitchens and wardrobes", "Lighting plans", "Material boards"],
     image:
-      "https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=1600&q=80",
+      "/projects/kitchen.jpg",
   },
   {
     slug: "renovation",
@@ -162,7 +163,7 @@ export const services = [
       "Remodeling starts with what the existing structure can carry. We open rooms, replace finishes, and extend only where the frame and the authority allow it.",
     points: ["Facade modernization", "Kitchen and bath rebuilds", "House extensions"],
     image:
-      "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?auto=format&fit=crop&w=1600&q=80",
+      "/projects/bath-marble.jpg",
   },
   {
     slug: "project-management",
@@ -174,7 +175,7 @@ export const services = [
       "Owners away from the city still need a record. We run the schedule, photograph progress, and keep the cost ledger aligned with the bill of quantities.",
     points: ["Milestone schedules", "Cost ledgers", "Site safety checks"],
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80",
+      "/projects/damp-course.jpg",
   },
   {
     slug: "consultancy",
@@ -186,7 +187,7 @@ export const services = [
       "Before a contract is signed, a short consultancy can test whether the plot, the budget, and the drawing agree. We review rates, structure, and whether the scheme is worth building.",
     points: ["Rate and BOQ audits", "Structural reviews", "Feasibility notes"],
     image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+      "/projects/brick-house.jpg",
   },
 ];
 
@@ -327,7 +328,7 @@ export const reasons = [
 
 export const slides = [
   {
-    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=2200&q=80",
+    image: "/projects/arched-front.jpg",
     kicker: "Islamabad & Rawalpindi",
     title: "Building trust. Creating landmarks.",
     text: "Houses, grey structure, and turnkey work from one team.",
@@ -335,15 +336,15 @@ export const slides = [
     secondary: { label: "Inquire now", to: "/contact" },
   },
   {
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2200&q=80",
+    image: "/projects/slab-crew.jpg",
     kicker: "Residential grey structure",
-    title: "From Rs 2,950 / sq. ft.",
+    title: "Starting from Rs 2,950 per sq. ft.",
     text: "Foundations, reinforced concrete, and roof slabs with Grade-60 steel.",
     primary: { label: "Calculate cost", to: "/calculator" },
     secondary: { label: "Grey structure", to: "/services#grey-structure" },
   },
   {
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=2200&q=80",
+    image: "/projects/stone-entrance.jpg",
     kicker: "Design to handover",
     title: "Turnkey homes",
     text: "Drawings, approvals, structure, and finishes under one team.",
@@ -351,7 +352,7 @@ export const slides = [
     secondary: { label: "Book a consultation", to: "/contact" },
   },
   {
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=80",
+    image: "/projects/brick-house.jpg",
     kicker: "On site",
     title: "The frame, then the finish.",
     text: "The houses and slabs are in the project gallery.",
