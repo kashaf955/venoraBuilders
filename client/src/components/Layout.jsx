@@ -23,17 +23,32 @@ export default function Layout() {
   }, [location.pathname]);
 
   useEffect(() => {
-    const nodes = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("in");
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            observer.unobserve(entry.target);
+          }
         });
       },
       { threshold: 0.14 }
     );
-    nodes.forEach((node) => observer.observe(node));
-    return () => observer.disconnect();
+    const watch = (root) => {
+      if (root.nodeType !== 1) return;
+      if (root.matches(".reveal:not(.in)")) observer.observe(root);
+      root.querySelectorAll(".reveal:not(.in)").forEach((node) => observer.observe(node));
+    };
+    watch(document.body);
+    // Cards added after load (filters, hot reload) need observing too, or they stay hidden.
+    const mutations = new MutationObserver((records) => {
+      records.forEach((record) => record.addedNodes.forEach(watch));
+    });
+    mutations.observe(document.body, { childList: true, subtree: true });
+    return () => {
+      observer.disconnect();
+      mutations.disconnect();
+    };
   }, [location.pathname]);
 
   return (

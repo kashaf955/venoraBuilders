@@ -370,21 +370,27 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Our 10-marla house in DHA was taken to roof slab on the dates we set. We saw the steel and the concrete tests before the next pour.",
-    name: "Usman Khalid",
-    meta: "Home owner, DHA Islamabad",
+      "Our grey structure was built with Grade-60 steel and proper curing. The bill of quantities was clear from the start, and the work matched what was agreed.",
+    name: "Waqar Shah",
+    meta: "Grey structure client",
   },
   {
     quote:
-      "The plaza frame in Gulberg Greens stayed on the programme. The quantity record matched the bill, and the site was kept in order.",
-    name: "Sana Iqbal",
-    meta: "Commercial client, Islamabad",
+      "The grey structure went up on schedule. Engineers were on site for every pour, and we were shown the steel before the concrete went in.",
+    name: "Ali Raza",
+    meta: "Grey structure client",
   },
   {
     quote:
-      "The Bahria Town house was opened only where the remodel needed it. The kitchen and baths were rebuilt around the rooms we already use.",
-    name: "Hamza Farooq",
-    meta: "Renovation client, Bahria Town, Islamabad",
+      "Venora handled our house from drawings to handover. The structure, finishes, and approvals were all managed by one team, and the result came out exactly as planned.",
+    name: "M Sajjad",
+    meta: "Turnkey project client",
+  },
+  {
+    quote:
+      "From the first drawing to the keys, the turnkey work was handled for us. Honest pricing, regular progress updates, and a team that picks up the phone.",
+    name: "M Ramez Kayani",
+    meta: "Turnkey project client",
   },
 ];
 

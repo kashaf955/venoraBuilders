@@ -351,7 +351,7 @@ p { margin: 0 0 0.9rem; }
   display: grid;
   gap: 1.25rem;
 }
-.news-grid, .pillar-grid, .quote-grid { grid-template-columns: repeat(3, 1fr); }
+.news-grid, .pillar-grid { grid-template-columns: repeat(3, 1fr); }
 .card-grid.four { grid-template-columns: repeat(4, 1fr); }
 .news-card, .service-card, .project-card, .pillar, .reason-grid article, blockquote, .spec-card, .fact-card, .calc-panel, .estimate, .form, .contact-facts article, .form-success {
   background: var(--card);
@@ -636,7 +636,7 @@ p { margin: 0 0 0.9rem; }
 }
 .standards .reason-grid h3 { margin: 0 0 0.25rem; font-size: 1.15rem; }
 .standards .reason-grid p { margin: 0; color: var(--muted); }
-.quote-grid { grid-template-columns: repeat(3, 1fr); }
+.quote-grid { grid-template-columns: repeat(2, 1fr); }
 blockquote { margin: 0; padding: 1.35rem; border-top: 4px solid var(--accent); }
 blockquote p { font-size: 1rem; color: var(--ink); }
 blockquote footer { display: grid; }

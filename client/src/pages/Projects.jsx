@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import PageHero from "../components/PageHero.jsx";
+import Testimonials from "../components/Testimonials.jsx";
 import { projects } from "@shared/content.js";
 
 const filters = ["All", "Residential", "Commercial", "Interior", "Grey Structure"];
@@ -57,6 +58,7 @@ export default function Projects() {
           </div>
         </div>
       </section>
+      <Testimonials />
     </>
   );
 }
